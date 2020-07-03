@@ -1,0 +1,45 @@
+{
+  "name": "vuejs-ts-npm-template",
+  "version": "1.0.0-alpha.2",
+  "description": "",
+  "main": "./dist/bundle.js",
+  "typings": "./dist/component/export.d.ts",
+  "module": "./src/component/export.ts",
+  "scripts": {
+    "dev": "NODE_ENV=development webpack-dev-server --config=webpack.dev.config.js --progress --color",
+    "build:clean": "rimraf dist",
+    "build:lib": "NODE_ENV=production webpack --config=webpack.lib.config.js --progress --color",
+    "build": "npm run build:clean && npm run build:lib",
+    "publish:lib": "npm run build:lib && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hulkmaster/vue-ts-npm-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Hulkmaster/vue-ts-npm-template/issues"
+  },
+  "homepage": "https://github.com/Hulkmaster/vue-ts-npm-template#readme",
+  "devDependencies": {
+    "css-loader": "^3.6.0",
+    "html-webpack-plugin": "^4.3.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "rimraf": "^3.0.2",
+    "sass": "^1.26.9",
+    "sass-loader": "^9.0.0",
+    "style-loader": "^1.2.1",
+    "ts-loader": "^7.0.5",
+    "typescript": "^3.9.6",
+    "vue": "^2.6.11",
+    "vue-loader": "^15.9.3",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^4.2.2"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.11"
+  }
+}
